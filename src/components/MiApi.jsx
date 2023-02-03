@@ -31,7 +31,7 @@ function PokemonList() {
   );
 }, [filter, pokemon, sortOrder]);
 
-const toggleSortOrder = () => {
+const buttonSortOrder = () => {
   setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
 };
   return (
@@ -42,7 +42,7 @@ const toggleSortOrder = () => {
         value={filter}
         onChange={e => setFilter(e.target.value)}
       />
-      <button onClick={toggleSortOrder}>
+      <button onClick={buttonSortOrder}>
         {sortOrder === 'asc' ? 'Ordenar de la Z a la A' : 'Ordenar de la A a la Z'}
       </button>
       <div className="pokemon-cards">
